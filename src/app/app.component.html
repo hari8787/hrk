@@ -1,0 +1,60 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12 bg-danger text-white text-center"><h2>Student Details</h2></div>
+  </div>
+  <br>
+  <div class="row">
+    <div class="col-sm-2"></div>
+    <div class="col-sm-8">
+      <table class="table table table-bordered">
+        <th class="bg-warning">studentid</th>
+        <th class="bg-warning">studentname</th>
+        <tr *ngFor="let data of h">
+          <td><button class="btn btn-white" data-toggle="modal" data-target="#a"
+              (click)="studentdata(data)">{{data.id}}</button></td>
+          <td><button class="btn btn-white" data-toggle="modal" data-target="#a"
+            (click)="studentdata(data)">{{data.name}}</button></td>
+        </tr>
+      </table>
+    </div>
+    <div class="col-sm-2"></div>
+  </div>
+</div>
+
+
+
+
+<div *ngIf=hrk>
+<div class="modal" id="a">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header bg-warning">
+        <h4 class="modal-title">Student Details</h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+
+      <!-- Modal body -->
+      <div class="modal-body">
+        <table class="table table-bordered">
+          <tr><td><b>Student ID :- </b></td><td>{{hrk.id}}</td></tr>
+           <tr><td><b>Student Name :-</b> </td><td>{{hrk.name}}</td></tr>
+            <tr><td><b>DOB:-</b></td><td>{{hrk.DOB}}</td></tr>
+            <tr><td><b>Age :- </b></td><td>{{hrk.age}}</td></tr>
+            <tr><td><b>Classroom :- </b></td><td>{{hrk.class}}</td></tr>
+            <tr><td><b>Rollnumber :- </b></td><td>{{hrk.rollnumber}}</td></tr>
+        </table>
+      </div> 
+
+      <!-- Modal footer -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+</div>
+
+
